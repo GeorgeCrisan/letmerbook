@@ -14,29 +14,29 @@ function App() {
   });
  
   
-  let generateUrl = ()=> {
-    let url = 'https://www.googleapis.com/books/v1/volumes?',
-      qString = {
-        q: state.searchTerms,
-        maxResults: state.maxResults,
-        startIndex: state.page,
-        apikey: process.env.REACT_APP_API_KEY
-      };
-
-      for(let el in qString) {
-          url += el === 'q' ? (el + '=' + qString[el]) : ('&' + el + '=' + qString[el]); 
-      }
-
-      return url;
-
-
-  };
- 
-  let fetchBooks = ()=>{
-    return axios.get(generateUrl());
-  };
 
   useEffect(()=>{
+
+    let generateUrl = ()=> {
+      let statenow = state;
+      let url = 'https://www.googleapis.com/books/v1/volumes?',
+        qString = {
+          q: statenow.searchTerms,
+          maxResults: statenow.maxResults,
+          startIndex: statenow.page,
+          apikey: process.env.REACT_APP_API_KEY
+        };
+  
+        for(let el in qString) {
+            url += el === 'q' ? (el + '=' + qString[el]) : ('&' + el + '=' + qString[el]); 
+        }
+  
+        return url;
+    };
+
+    let fetchBooks = ()=>{
+      return axios.get(generateUrl());
+    };
 
     fetchBooks().then((result)=>{
       let data = result.data;
@@ -47,7 +47,7 @@ function App() {
     });
 
  
-  },[fetchBooks]);
+  },[state]);
 
   return (
     <div className="App">
