@@ -1,14 +1,63 @@
-import React from 'react';
-//import dotenv from 'dotenv';
-//dotenv.config();
-//require('dotenv').config()
+import React , {useState, useEffect} from 'react';
+import Banner from './Components/Banner';
+import SearchForm from './Components/SearchForm';
+import BooksResults from './Components/BooksResults';
+import axios from 'axios';
 
 function App() {
-  let apikey = process.env.REACT_APP_API_KEY;
-  console.log(typeof apikey, apikey, 'key is this', process.cwd(), process.env.NODE_ENV);
+
+  const [state, setState] = useState({searchTerms: "Atlas Shrugged",
+     page: "0",
+    maxResults: "6",
+    typeText: "free-ebooks",
+    type: false
+  });
+ 
+  
+  let generateUrl = ()=> {
+    let url = 'https://www.googleapis.com/books/v1/volumes?', qString = {
+      q: state.searchTerms,
+      maxResults: state.maxResults,
+      startIndex: state.page,
+  
+      
+      apikey: process.env.REACT_APP_API_KEY
+      };
+
+      for(let el in qString) {
+        console.log(el);
+          url += ('&' + el + qString[el]); 
+      }
+
+      return url;
+
+
+  };
+ 
+  let fetchBooks = ()=>{
+    return axios.get(generateUrl());
+  };
+
+  useEffect(()=>{
+
+    fetchBooks().then((result)=>{
+      let data = result.data;
+      console.log(result);
+      console.log(data);
+    }).catch((error)=>{
+      console.log('Error', error);
+    });
+
+ 
+  },[]);
+
   return (
     <div className="App">
-      Hi
+      <>  
+        <Banner />
+        <SearchForm />
+        <BooksResults />
+      </>
     </div>
   );
 }
