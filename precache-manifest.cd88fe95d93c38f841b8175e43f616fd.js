@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "70751516696bd4fb004d087f180c03fb",
+    "revision": "1989844604c8c77dc53f00912a146c21",
     "url": "/letmerbook/index.html"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/letmerbook/static/js/2.302377f6.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "f63129cdb591bbd524c5",
-    "url": "/letmerbook/static/js/main.da31155a.chunk.js"
+    "revision": "51f29f941ea2a453639b",
+    "url": "/letmerbook/static/js/main.4e848f16.chunk.js"
   },
   {
     "revision": "779913f386c06011eeca",
