@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/letmerbook/static/js/main.4e848f16.chunk.js",
-    "main.js.map": "/letmerbook/static/js/main.4e848f16.chunk.js.map",
+    "main.js": "/letmerbook/static/js/main.9abac9ad.chunk.js",
+    "main.js.map": "/letmerbook/static/js/main.9abac9ad.chunk.js.map",
     "runtime-main.js": "/letmerbook/static/js/runtime-main.f93da9b4.js",
     "runtime-main.js.map": "/letmerbook/static/js/runtime-main.f93da9b4.js.map",
-    "static/js/2.302377f6.chunk.js": "/letmerbook/static/js/2.302377f6.chunk.js",
-    "static/js/2.302377f6.chunk.js.map": "/letmerbook/static/js/2.302377f6.chunk.js.map",
+    "static/js/2.a7168503.chunk.js": "/letmerbook/static/js/2.a7168503.chunk.js",
+    "static/js/2.a7168503.chunk.js.map": "/letmerbook/static/js/2.a7168503.chunk.js.map",
     "index.html": "/letmerbook/index.html",
-    "precache-manifest.cd88fe95d93c38f841b8175e43f616fd.js": "/letmerbook/precache-manifest.cd88fe95d93c38f841b8175e43f616fd.js",
+    "precache-manifest.99903418ff22645e89b1a3fdc24d1c7e.js": "/letmerbook/precache-manifest.99903418ff22645e89b1a3fdc24d1c7e.js",
     "service-worker.js": "/letmerbook/service-worker.js",
-    "static/js/2.302377f6.chunk.js.LICENSE.txt": "/letmerbook/static/js/2.302377f6.chunk.js.LICENSE.txt"
+    "static/js/2.a7168503.chunk.js.LICENSE.txt": "/letmerbook/static/js/2.a7168503.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.f93da9b4.js",
-    "static/js/2.302377f6.chunk.js",
-    "static/js/main.4e848f16.chunk.js"
+    "static/js/2.a7168503.chunk.js",
+    "static/js/main.9abac9ad.chunk.js"
   ]
 }

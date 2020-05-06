@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/letmerbook/precache-manifest.cd88fe95d93c38f841b8175e43f616fd.js"
+  "/letmerbook/precache-manifest.99903418ff22645e89b1a3fdc24d1c7e.js"
 );
 
 self.addEventListener('message', (event) => {
