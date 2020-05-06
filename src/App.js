@@ -15,18 +15,16 @@ function App() {
  
   
   let generateUrl = ()=> {
-    let url = 'https://www.googleapis.com/books/v1/volumes?', qString = {
-      q: state.searchTerms,
-      maxResults: state.maxResults,
-      startIndex: state.page,
-  
-      
-      apikey: process.env.REACT_APP_API_KEY
+    let url = 'https://www.googleapis.com/books/v1/volumes?',
+      qString = {
+        q: state.searchTerms,
+        maxResults: state.maxResults,
+        startIndex: state.page,
+        apikey: process.env.REACT_APP_API_KEY
       };
 
       for(let el in qString) {
-        console.log(el);
-          url += ('&' + el + qString[el]); 
+          url += el === 'q' ? (el + '=' + qString[el]) : ('&' + el + '=' + qString[el]); 
       }
 
       return url;
