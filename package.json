@@ -1,7 +1,7 @@
 {
   "name": "letmerbook",
   "version": "0.1.0",
-  "homepage": "letmerbook",
+  "homepage": "5books",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
