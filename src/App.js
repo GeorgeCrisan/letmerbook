@@ -47,13 +47,13 @@ function App() {
     });
 
  
-  },[]);
+  },[fetchBooks]);
 
   return (
     <div className="App">
       <>  
         <Banner />
-        <SearchForm />
+        <SearchForm setState={setState} />
         <BooksResults />
       </>
     </div>
